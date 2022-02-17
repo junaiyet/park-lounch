@@ -1,0 +1,138 @@
+.about {
+    // background-color: red;
+    padding-top: 80px;
+    position: relative;
+
+    .wall-images {
+        position: absolute;
+        width: 440px;
+        height: 611px;
+        top: 100px;
+        right: 0;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 145px;
+            height: 193px;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+            border-radius: 5%;
+            z-index: 0;
+        }
+
+        .wall-photo-1 {
+            top: 194px;
+            right: 255px;
+        }
+
+        .wall-photo-2 {
+            top: 97px;
+            right: 95px;
+        }
+
+        .wall-photo-3 {
+            top: 305px;
+            right: 95px;
+        }
+
+        .wall-photo-4 {
+            width: auto;
+            top: 0;
+            left: 358px;
+            right: auto;
+        }
+
+        .wall-photo-5 {
+            width: auto;
+            top: 208px;
+            left: 358px;
+            right: auto;
+        }
+
+        .wall-photo-6 {
+            width: auto;
+            top: 416px;
+            left: 358px;
+            right: auto;
+        }
+    }
+
+    .wall-images-reverse {
+        position: absolute;
+        width: 440px;
+        height: 611px;
+        top: 100px;
+        left: 0;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 145px;
+            height: 193px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+            border-radius: 5%;
+            z-index: 0;
+        }
+
+        .wall-photo-1 {
+            top: 194px;
+            left: 255px;
+        }
+
+        .wall-photo-2 {
+            top: 97px;
+            left: 95px;
+        }
+
+        .wall-photo-3 {
+            top: 305px;
+            left: 95px;
+        }
+
+        .wall-photo-4 {
+            width: auto;
+            top: 0;
+            right: 358px;
+            left: auto;
+        }
+
+        .wall-photo-5 {
+            width: auto;
+            top: 208px;
+            right: 358px;
+            left: auto;
+        }
+
+        .wall-photo-6 {
+            width: auto;
+            top: 416px;
+            right: 358px;
+            left: auto;
+        }
+    }
+}
+
+@include mobile{
+    .about{
+        .wall-images {
+         display: none;
+        }
+    
+        .wall-images-reverse {
+   
+            display: none;
+        }
+        .about-item {
+            padding-bottom: 50px;
+        }
+        
+    }
+}

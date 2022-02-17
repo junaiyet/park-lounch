@@ -1,0 +1,102 @@
+
+.gallery{
+    padding-bottom: 40px;
+    .imges{
+        margin-top: 40px;
+        position: relative;
+        &:hover{
+            .overlay{
+                opacity: 1;
+            }
+           .hover-icons .right-icon {
+                right: -63px;
+                opacity: 1;
+            }
+         .hover-icons .left-icon {
+                left: -63px;
+                opacity: 1;
+            }
+         
+        }
+        img{
+            width: 100%;
+        }
+        .overlay{
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            width: 90%;
+            height: 95%;
+            background-color: rgba(255, 255, 255, 0.753);
+            opacity: 0;
+            transition: .4s;
+
+        
+        }
+        .hover-icons{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+          
+         
+            .icon{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                margin: 0 4px;
+                font-size: 12px;
+                vertical-align: middle;
+                background: #111;
+                border: 1px solid #111;
+                color: #fff;
+                border-radius: 50%;
+                text-decoration: none;
+                transition: .4s;
+                opacity: 0;
+            }
+            .left-icon {
+                left: 5px;
+            }
+            .right-icon {
+                right: 5px;
+            }
+  
+        }
+ 
+    }
+  
+}
+.vbox-container img {
+    max-width: 25% !important;
+    height: auto;
+}
+.vbox-close {
+    top: 5%;
+    right: 10%;
+    font-size: 48px;
+}
+@include mobile{
+    .gallery.section {
+       margin: 0 20px;
+    } 
+    .vbox-container img {
+        max-width: 80% !important;
+    }
+}
+@include tablet{
+
+    .vbox-container img {
+        max-width: 40% !important;
+    }
+}
+@include desktop-sm{
+
+    .vbox-container img {
+        max-width: 30% !important;
+    }
+}

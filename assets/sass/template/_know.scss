@@ -1,0 +1,231 @@
+
+.know-how {
+    .knows-slider-img {
+        position: relative;
+        .know-slider{
+            &:hover {
+                .prevarrow{
+                    opacity: 1;
+                    left: 30px;
+                }
+                .nextarrow {
+                    opacity: 1;
+                    right: 30px;
+                }
+            }
+        
+          }
+          .know-bg {
+            background: url(../images/know-img-1.jpg) no-repeat center;
+            background-size: 100% 100%;
+            padding: 250px 0;
+            position: relative;
+            &::after{
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: "";
+                background-color: rgba(0, 0, 0, 0.1);
+                width: 100%;
+                height: 100%;
+            }
+         
+        }
+        .know-bg2{
+            background: url(../images/know-img-2.jpg) no-repeat center; 
+            background-size: 100% 100%;
+        }
+        .know-bg3{
+            background: url(../images/service-1.jpg) no-repeat center; 
+            background-size: 100% 100%;
+        }
+        .know-bg3{
+            background: url(../images/service-2.jpg) no-repeat center; 
+            background-size: 100% 100%;
+        }
+        .prevarrow {
+            position: absolute;
+            top: 50%;
+            left: 00px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 12px;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            z-index: 10;
+            transition: .4s;
+            opacity: 0;
+        }
+    
+        .nextarrow {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 12px;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            z-index: 10;
+            transition: .4s;
+            opacity: 0;
+        }
+    
+
+  
+    
+    }
+ 
+
+    .progressbar {
+        background-color: transparent;
+        margin-bottom: 15px;
+
+        .proggress {
+            height: 1px !important;
+        }
+
+        .percentCount {
+            margin-top: -26px;
+
+        }
+
+        .progress_title {
+               padding-bottom: 3px;
+              line-height: 21px;
+                font-family: $primary-fonts;
+                font-size: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $secondery-color;
+                padding: 0;
+                letter-spacing: 0.05em;
+        
+        
+        }
+
+    }
+
+  
+
+    .accordion{
+ 
+        .accordion-item {
+            border: 0;
+               border-radius: 0 !important;
+              &:last-of-type .accordion-button.collapsed {
+                  border-bottom-right-radius: 0;
+                  border-bottom-left-radius: 0;
+              }
+              border-bottom: 1px solid rgba(0,0,0,.125) !important;
+              .accordion-button{
+                      color: $primary-color;
+                      background-color:transparent;
+                      box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+                      position: relative;
+                      display: block;
+                      line-height: 1.5;
+                      padding: 15px 0;
+                      cursor: pointer;
+                      font-family: $primary-fonts;
+                      font-size: 10px;
+                      font-weight: 700;
+                      text-transform: uppercase;
+                      color: $secondery-color;
+                      letter-spacing: 0.05em;
+               
+              }
+               ul{ 
+                   li{
+                     a {
+                          display: block;
+                          color: $secondery-color;
+                          font-size: 12px;
+                          text-decoration: none;
+                          margin-bottom: 15px;
+                          width: auto;
+                          font-weight: 700;
+                      }
+                   }
+               }
+              .accordion-button:focus {
+                  border-color: transparent;
+                  box-shadow: none;
+              }
+              .accordion-button::after {
+          
+                  background-image: none;
+              
+              }
+             .accordion-button .plus {
+                  position: absolute;
+                  top: 50%;
+                  right: 15px;
+                  transform: translateY(-50%);
+                  color: $secondery-color;
+                  opacity: 1;
+              }
+             .accordion-button .minimize {
+                  position: absolute;
+                  top: 50%;
+                  right: 15px;
+                  transform: translateY(-50%);
+                  color: $secondery-color;
+                  opacity: 0;
+              }
+             .accordion-button:not(.collapsed) .minimize {
+                  opacity: 1;
+          
+              }
+             .accordion-button:not(.collapsed) .plus {
+                  opacity: 0;
+          
+              }
+          }
+          
+    }
+    
+
+}
+@include  mobile{
+    .accordion{
+        margin: 60px 0;
+    }
+    .coustom-pl {
+        padding: 40px;
+    }
+    .coustom-pr {
+        padding: 40px;
+    }
+}
+.parallax > use{
+    animation:move-forever 12s linear infinite;
+    &:nth-child(1){animation-delay:-2s;}
+    &:nth-child(2){animation-delay:-2s; animation-duration:5s}
+    &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+  }
+  
+  @keyframes move-forever{
+    0%{transform: translate(-90px , 0%)}
+    100%{transform: translate(85px , 0%)} 
+  }
+  .editorial {
+    display: block;
+    width: 100%;
+    height: 6em;
+    max-height: 100vh;
+    margin: 0;
+    transform: translateY(-90px);
+}
+
+

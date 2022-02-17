@@ -1,0 +1,32 @@
+.services{
+    padding-top: 60px;
+    padding-bottom: 180px;
+    .service-content{
+        display: flex;
+        align-items: center;
+        .number{
+              color: transparent;
+                -webkit-text-stroke: 1px #111;
+                text-stroke: 1px #111;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 175px;
+                line-height: 175px;
+                font-weight: 700; 
+                min-width: 100px;
+                text-align: center;
+               }
+        .details {
+            padding-left: 55px;
+        }
+    }
+}
+
+
+@include mobile{
+    .hero-subheading {
+        padding-top: 40px;
+    }
+    .services {
+        padding-bottom: 60px;
+    }
+}

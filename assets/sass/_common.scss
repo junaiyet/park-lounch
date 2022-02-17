@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// ::selection{
+//     background-color:$secondery-color ;
+//     color: $white;
+// }
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    height: auto;
+    min-height: inherit;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.section-bg {
+    background-color: $bg-primary;
+}
+
+blockquote {
+    position: relative;
+    font-family: $secondery-fonts;
+    color: $secondery-color;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2;
+    padding: 0;
+    z-index: 1;
+    padding-bottom: 80px;
+
+    &::before {
+        content: "“";
+        content: "\201C";
+        position: absolute;
+        color: rgba(17, 17, 17, .15);
+        font-family: Georgia, serif;
+        font-size: 165px;
+        font-style: normal;
+        left: 0;
+        top: -90px;
+        z-index: -10;
+    }
+}
+
+// 
+.coustom-pl {
+    padding-left: 70px;
+}
+
+.coustom-pr {
+    padding-right: 70px;
+}
+
+
+.more_wraper_center {
+    position: relative;
+    width: 120px !important;
+    max-width: 120px;
+    height: 120px;
+    text-align: center;
+    background-color: $white;
+    border-radius: 50%;
+
+    &:hover {
+        .more-button-bg-center {
+
+            animation: roted 10s infinite;
+
+        }
+    }
+
+    .more-button-bg-center {
+        border: 2px dashed $white;
+        padding: 5px;
+        min-width: 130px !important;
+        height: 130px;
+        border-radius: 50%;
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        // animation: roted 5s infinite;
+
+    }
+
+
+}
+
+.more-button-txt-center {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 120px !important;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #111;
+    margin: 0 auto;
+    cursor: pointer;
+
+    span {
+        color: #111;
+    }
+}
+
+@keyframes roted {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.backtotop {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: $dark;
+    color: $white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border: none;
+    border-radius: 50%;
+}

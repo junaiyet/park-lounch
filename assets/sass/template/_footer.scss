@@ -1,0 +1,38 @@
+.footer{
+    iframe{
+        width: 100%;
+    }
+    .footer-content{
+        text-align: center;
+        .logo{
+            padding: 100px 0 80px 0;
+            img{
+                width: auto;
+            }
+        }
+        .social-icons{
+            padding-bottom: 100px;
+            li{
+                display: inline-block;
+                a{
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    padding: 0 12px;
+                    i{
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+        .copyright {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0 auto -2px auto;
+            color: $dark;
+            font-weight: 700;
+        }
+     
+    }
+}

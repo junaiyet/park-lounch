@@ -1,0 +1,99 @@
+.navigation {
+    .navbar {
+        position: fixed;
+        margin: 0 auto;
+        width: 100%;
+        z-index: 999;
+        padding: 88px 15px 35px 15px;
+        transition: all .4s linear;
+
+        &.fixd-menu {
+            position: fixed;
+            background-color:$white;
+            padding: 15px;
+            box-shadow: 2px 6px 11px -1px rgba(148,135,135,0.5);
+            -webkit-box-shadow: 2px 6px 11px -1px rgba(148,135,135,0.5);
+            -moz-box-shadow: 2px 6px 11px -1px rgba(148,135,135,0.5);
+            .logo-light{
+                display: none;
+            }
+            .logo-dark{
+                display: block;
+            }
+            
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $dark;
+    
+                    }
+                }
+            }
+            .navbar-toggler {
+                i {
+                    color: $dark;
+                }
+            }
+        
+        }
+        .logo-dark{
+            display: none;
+        }
+        .navbar-nav {
+         
+            .nav-item {
+                .nav-link {
+                    font-family: $primary-fonts;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $white;
+                    letter-spacing: 0.05em;
+
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .navigation {
+        .navbar {
+            padding: 20px;
+            // background-color: $dark;
+            color: $white;
+
+            .navbar-toggler {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .navigation {
+        .navbar {
+            padding: 20px;
+            // background-color: $dark;
+            color: $white;
+
+            .navbar-toggler {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+@include desktop-sm{
+    .navigation{
+        .navbar {
+            padding: 50px;
+        }
+    }
+}
+ 
